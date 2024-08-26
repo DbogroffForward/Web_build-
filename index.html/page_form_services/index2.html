@@ -28,7 +28,7 @@
         <h1>Service Request</h1>
     </header>
     <main>
-        <form name="service-request" method="POST" data-netlify="true" novalidate>
+        <form name="service-request" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="service-request" />
 
             <label for="name">Name:</label>
@@ -38,7 +38,7 @@
             <input type="text" id="address" name="address" required>
             
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
             
             <label for="service">Service Needed:</label>
             <select id="service" name="service" required>
