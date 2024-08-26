@@ -1,23 +1,23 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
     var form = document.querySelector("form");
+    var formMessage = document.getElementById("form-message");
 
-    // Adding event listener for form submission
-    form.addEventListener("submit", function(event) {
-        // Prevent default form submission
-        event.preventDefault();
+    form.addEventListener("submit", function (event) {
+        var isValid = true;
+        var inputs = form.querySelectorAll('input, select');
 
-        // Check form validity
-        if (!form.checkValidity()) {
-            event.stopPropagation(); // Stop the form from submitting if invalid
+        inputs.forEach(function (input) {
+            if (!input.checkValidity()) {
+                isValid = false;
+            }
+        });
+
+        if (!isValid) {
+            event.preventDefault();
+            formMessage.style.display = 'block';
+            formMessage.textContent = "Please make sure all fields are filled out correctly.";
         } else {
-            // If the form is valid, proceed with the redirection after 3 seconds
-            setTimeout(function() {
-                form.submit(); // You can change this to redirect to another page as needed
-                // window.location.href = "another-page.html";
-            }, 3000);
+            formMessage.style.display = 'none';
         }
-
-        // Add class indicating validation was triggered
-        form.classList.add('was-validated');
     }, false);
 });
