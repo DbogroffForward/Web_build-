@@ -1,55 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service Request Form</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var form = document.querySelector("form");
-            var formMessage = document.getElementById("form-message"); // Reference to the message container
-
-            form.addEventListener("submit", function(event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault(); // Prevent form submission
-                    formMessage.style.display = 'block'; // Show the custom message
-                } else {
-                    formMessage.style.display = 'none'; // Hide the message if form is valid
-                    // Form is valid, you can proceed with form submission logic here
-                }
-                form.classList.add('was-validated');
-            }, false);
-        });
-    </script>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <h1>Service Request</h1>
     </header>
     <main>
-        <form name="service-request" method="POST" data-netlify="true">
+        <form class="service-form" name="service-request" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="service-request" />
 
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
+            <div class="name-container">
+                <div>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                </div>
+                <div>
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                </div>
+            </div>
+
             <label for="address">Address:</label>
-            <input type="text" id="address" name="address" required>
+            <input type="text" id="address" name="address"  placeholder="123 Main st." required>
+
+            <div class="city-state-zip-container">
+                <div>
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" placeholder="San Diego" required>
+                </div>
+                <div>
+                    <label for="state">State:</label>
+                    <input type="text" id="state" name="state" value="CA" required>
+                </div>
+                <div>
+                    <label for="zip">Zip Code:</label>
+                    <input type="text" id="zip" name="zip" placeholder="92101" required>
+                </div>
+            </div>
             
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
-            
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="yourname@example.com" required>
+
+
             <label for="service">Service Needed:</label>
             <select id="service" name="service" required>
                 <option value="">Please select a service</option>
                 <option value="plumbing">Plumbing</option>
                 <option value="electrical">Electrical</option>
                 <option value="painting">Painting</option>
+                <option value="drywall">Drywall</option>
                 <option value="general_maintenance">General Maintenance</option>
             </select>
 
-            <div id="form-message" style="display: none; color: red; margin-top: 10px;">
+            <label for="note">Note (optional):</label>
+            <textarea id="note" name="note" rows="4" placeholder="Care to describe your issue in more detail?" maxlength="500"></textarea>
+
+            <div id="form-message" style="display: none; color: rgb(0, 166, 255); margin-top: 10px;">
                 All information must be filled before submitting.
             </div>
 
@@ -59,5 +75,9 @@
     <footer>
         <p>&copy; 2024 Forward Maintenance Group LLC</p>
     </footer>
+
+    <!-- JavaScript goes here -->
+    <script src="script.js"></script>
 </body>
+
 </html>

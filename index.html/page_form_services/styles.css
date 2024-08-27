@@ -1,35 +1,66 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #959fef80; /* Replace with your desired background color */
+    font-family: Arial, sans-serif;
+    /* No positioning or z-index, so it stays behind all content */
+}
+/* Container for the form */
 .service-form {
     max-width: 500px;
     margin: auto;
     padding: 20px;
     background: #f8f8f8;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Consistent spacing between each field */
 }
 
+/* Label styling */
 .service-form label {
-    margin-top: 10px;
-    display: block;
     font-size: 16px;
     color: #333;
+    margin-bottom: 0px;
 }
 
-.service-form input, .service-form select {
+/* Input, select, and button styling */
+.service-form input, .service-form button {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 20px;
+    padding: 10px; /* Current padding */
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
+    
 }
 
-.service-form button {
+.service-form select {
     width: 100%;
-    padding: 10px;
+    padding: 50px 10px; /* Increase vertical padding to make the box taller */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 35px; /* Ensure the height adjusts with padding */
+    font-size: 16px; /* Optional: Adjust font size for balance */
+    
+}
+
+/* Ensures each form element takes up the full width */
+.service-form input, .service-form select, .service-form button {
+    display: block;
+    width: 100%;
+    margin: 0; /* Remove any default margin that could affect alignment */
+}
+
+
+
+/* Button styling */
+.service-form button {
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
 }
@@ -38,20 +69,71 @@
     background-color: #45a049;
 }
 
-.invalid-feedback {
-    color: red;
-    display: none;
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .service-form {
+        padding: 15px;
+    }
+
+    .service-form input, .service-form select, .service-form button {
+        font-size: 14px;
+    }
+}
+.city-state-zip-container {
+    display: flex;
+    gap: 20px; /* Adjust gap as needed */
 }
 
-input:invalid + .invalid-feedback,
-select:invalid + .invalid-feedback {
+.city-state-zip-container > div {
+    flex: 1; /* Make each field take equal width */
+}
+
+.city-state-zip-container label {
     display: block;
+    margin-bottom: 5px;
 }
 
-input:valid, select:valid {
-    border-color: green;
+.city-state-zip-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-input:invalid, select:invalid {
-    border-color: red;
+.name-container {
+    display: flex;
+    gap: 20px; /* Adjust gap as needed */
 }
+
+.name-container > div {
+    flex: 1; /* Make each field take equal width */
+}
+
+.name-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.name-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.service-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+
+
