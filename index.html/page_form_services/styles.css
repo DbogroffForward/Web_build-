@@ -18,6 +18,12 @@ body {
     flex-direction: column;
     gap: 20px; /* Consistent spacing between each field */
 }
+/* Media query for mobile view */
+@media (max-width: 600px) {
+    .service-form {
+        margin: 10px; /* Adjust this value as needed for mobile view */
+    }
+}
 
 /* Label styling */
 .service-form label {
@@ -134,6 +140,63 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
 }
+/* Style the Cloudinary upload button */
+#upload_widget {
+    background-color: #83949e; /* Change this to your desired background color */
+    color: white; /* Change this to your desired text color */
+    border: none; /* Remove default borders */
+    padding: 10px 20px; /* Adjust padding for size */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 16px; /* Adjust font size */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Add hover effect */
+#upload_widget:hover {
+    background-color: #2980b9; /* Change to a darker shade for hover */
+}
+
+h3, label, .label-class {
+    font-weight: normal;
+    font-size: 16px;
+}
+
+#verify-info {
+    display: none;
+}
+
+/* Style the custom button */
+.custom-checkbox-button {
+    display: inline-block;
+    padding: 10px 20px;
+    justify-content: center;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    user-select: none; /* Prevent text selection */
+}
+
+/* Change background color when the checkbox is checked */
+#verify-info:checked + .custom-checkbox-button {
+    background-color: #c9e3ff;
+}
+
+/* Optional: Add hover effects */
+.custom-checkbox-button:hover {
+    background-color: #0056b3;
+}
+
+/* Optional: Add focus effects */
+.custom-checkbox-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
 
 
 
