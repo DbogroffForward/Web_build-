@@ -6,6 +6,12 @@ body {
     font-family: Arial, sans-serif;
     /* No positioning or z-index, so it stays behind all content */
 }
+
+header h1 {
+
+    text-align: center;
+
+}
 /* Container for the form */
 .service-form {
     max-width: 500px;
@@ -197,6 +203,9 @@ h3, label, .label-class {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
+footer p {
+    text-align: center;
 
+}
 
 

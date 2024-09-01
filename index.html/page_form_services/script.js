@@ -87,71 +87,75 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Cloudinary Upload Handling JavaScript
+    // Preload Cloudinary widget
+    let myWidget = cloudinary.createUploadWidget({
+        cloudName: 'dbukckpnp', // Replace with your Cloudinary cloud name
+        uploadPreset: 'FMG_photo_uplods', // Replace with your unsigned upload preset
+        maxFiles: 4,
+        sources: ['local', 'url', 'camera'], // Limit upload sources as needed
+        multiple: true,
+        maxImageWidth: 1000,
+        maxImageHeight: 1000,
+        folder: 'user_uploads', // Optional: Store uploads in a specific folder
+        resourceType: 'image',
+        text: {
+            en: {
+                intro: {
+                    title: 'Upload Your Files',
+                    content: 'Please do not upload images of people or pets, or any inappropriate content.'
+                }
+            }
+        }
+    }, function(error, result) {
+        if (!error && result && result.event === "success") {
+            const uploadedImagesContainer = document.getElementById('uploaded_images');
+            let thumbnails = Array.from(document.querySelectorAll('#uploaded_images img')).map(img => img.src);
+
+            // Prevent more than 4 images from being uploaded
+            if (thumbnails.length < 4) {
+                const imgContainer = document.createElement('div');
+                imgContainer.style.position = 'relative';
+                imgContainer.style.display = 'inline-block';
+                imgContainer.style.margin = '5px';
+
+                const imgElement = document.createElement('img');
+                imgElement.src = result.info.secure_url;
+                imgElement.style.maxWidth = "100px"; // Limit image size for display
+                imgElement.style.maxHeight = "100px"; // Limit image size for display
+                imgElement.classList.add('thumbnail');
+
+                // Create a delete button
+                const deleteButton = document.createElement('span');
+                deleteButton.textContent = 'X';
+                deleteButton.style.position = 'absolute';
+                deleteButton.style.top = '0';
+                deleteButton.style.right = '0';
+                deleteButton.style.backgroundColor = 'black';
+                deleteButton.style.color = 'white';
+                deleteButton.style.padding = '2px 5px';
+                deleteButton.style.cursor = 'pointer';
+                deleteButton.style.fontSize = '12px';
+
+                // Attach event to remove the image
+                deleteButton.addEventListener('click', removeImage);
+
+                imgContainer.appendChild(imgElement);
+                imgContainer.appendChild(deleteButton);
+                uploadedImagesContainer.appendChild(imgContainer);
+
+                thumbnails.push(result.info.secure_url); // Add the new thumbnail
+            }
+
+            // Disable the upload button if 4 images are uploaded
+            if (thumbnails.length >= 4) {
+                document.getElementById('upload_widget').disabled = true;
+                alert("You cannot upload more than 4 images.");
+            }
+        }
+    });
+
+    // Open widget when the button is clicked
     document.getElementById('upload_widget').addEventListener('click', function() {
-        cloudinary.openUploadWidget({
-            cloudName: 'dbukckpnp', // Replace with your Cloudinary cloud name
-            uploadPreset: 'FMG_photo_uplods', // Replace with your unsigned upload preset
-            maxFiles: 4,
-            sources: ['local', 'url', 'camera'], // Limit upload sources as needed
-            multiple: true,
-            maxImageWidth: 1000,
-            maxImageHeight: 1000,
-            folder: 'user_uploads', // Optional: Store uploads in a specific folder
-            resourceType: 'image',
-            text: {
-                en: {
-                    intro: {
-                        title: 'Upload Your Files',
-                        content: 'Please do not upload images of people or pets, or any inappropriate content.'
-                    }
-                }
-            }
-        }, function(error, result) {
-            if (!error && result && result.event === "success") {
-                const uploadedImagesContainer = document.getElementById('uploaded_images');
-                let thumbnails = Array.from(document.querySelectorAll('#uploaded_images img')).map(img => img.src);
-                
-                // Prevent more than 4 images from being uploaded
-                if (thumbnails.length < 4) {
-                    const imgContainer = document.createElement('div');
-                    imgContainer.style.position = 'relative';
-                    imgContainer.style.display = 'inline-block';
-                    imgContainer.style.margin = '5px';
-
-                    const imgElement = document.createElement('img');
-                    imgElement.src = result.info.secure_url;
-                    imgElement.style.maxWidth = "100px"; // Limit image size for display
-                    imgElement.classList.add('thumbnail');
-
-                    // Create a delete button
-                    const deleteButton = document.createElement('span');
-                    deleteButton.textContent = 'X';
-                    deleteButton.style.position = 'absolute';
-                    deleteButton.style.top = '0';
-                    deleteButton.style.right = '0';
-                    deleteButton.style.backgroundColor = 'red';
-                    deleteButton.style.color = 'white';
-                    deleteButton.style.padding = '2px 5px';
-                    deleteButton.style.cursor = 'pointer';
-                    deleteButton.style.fontSize = '12px';
-
-                    // Attach event to remove the image
-                    deleteButton.addEventListener('click', removeImage);
-
-                    imgContainer.appendChild(imgElement);
-                    imgContainer.appendChild(deleteButton);
-                    uploadedImagesContainer.appendChild(imgContainer);
-
-                    thumbnails.push(result.info.secure_url); // Add the new thumbnail
-                }
-
-                // Disable the upload button if 4 images are uploaded
-                if (thumbnails.length >= 4) {
-                    document.getElementById('upload_widget').disabled = true;
-                    alert("You cannot upload more than 4 images.");
-                }
-            }
-        });
+        myWidget.open(); // Open the preloaded widget
     }, false);
 });

@@ -12,10 +12,10 @@
 
 <body>
     <header>
-        <h1>Service Request</h1>
+        <h1>Service Request Form</h1>
     </header>
     <main>
-        <form class="service-form" name="service-request" method="POST" data-netlify="true">
+        <form class="service-form" name="service-request" method="POST" data-netlify="true" action="/form-submitted.html">
             <input type="hidden" name="form-name" value="service-request" />
 
             <div class="name-container">
@@ -74,13 +74,13 @@
             </div>
 
             <div class="photo-upload-section">
-                <h3>Images/Photos (4 max)</h3>
+                <h3>Images/Photos (4 maximum)</h3>
                 <button type="button" id="upload_widget" class="cloudinary-button"> Upload image files (optional)</button>
                 <div id="uploaded_images"></div>
             </div>
             <label for="verify-info">
                 <input type="checkbox" id="verify-info">
-                <span class="custom-checkbox-button">I have verified that my information is accurate</span>
+                <span class="custom-checkbox-button">I have verified that my information is correct</span>
             </label>
     
 
