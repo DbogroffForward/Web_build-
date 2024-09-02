@@ -56,7 +56,7 @@
 
             <label for="service">Service Needed:</label>
             <select id="service" name="service" required>
-                <option value="">Please select a service</option>
+                <option value="" disabled selected>Please select a service</option>
                 <option value="plumbing_fixtures">Plumbing Fixtures</option>
                 <option value="electrical_fixtures">Electrical Fixtures</option>
                 <option value="painting">Painting</option>
@@ -66,8 +66,8 @@
                 <option value="commercial_cleaning">Commercial Cleaning</option>
             </select>
 
-            <label for="note">Note (optional):</label>
-            <textarea id="note" name="note" rows="4" placeholder="Care to describe your issue in more detail?" maxlength="500"></textarea>
+            <label for="note">Note:</label>
+            <textarea id="note" name="note" rows="4" placeholder="Send us a message (Optional)" maxlength="500"></textarea>
 
             <div id="form-message" style="display: none; color: rgb(0, 166, 255); margin-top: 10px;">
                 All information must be filled before submitting.

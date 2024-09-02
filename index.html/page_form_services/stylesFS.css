@@ -1,0 +1,75 @@
+
+body {
+   
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to bottom, #768fd4, #3b58d6, #3b58d6);
+    background-size: cover; /* Ensure the gradient covers the entire background */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    min-height: 100vh; 
+    
+
+    /* No positioning or z-index, so it stays behind all content */
+}
+header h1 {
+
+    
+    width: 100px;
+    text-align: center;
+    text-shadow: 1px 1px 75px white; /* Enhances the embossed text with a soft shadow */
+    color: white;
+    margin: 50px auto;
+    font-size: 50px;
+
+   
+}
+
+header h2 {
+
+    text-align: center;
+    color: white;
+    
+
+}
+header p {
+
+    text-align: center;
+    margin-top: 10%;
+    
+    
+
+}
+
+.normal {
+    font-size: 25px;
+    text-align: center;
+    color: white;
+}
+
+.emphasis {
+    line-height: 1.6;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 10%;
+    font-size: 18px;
+    color: white;
+    
+}
+.footer p {
+    
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: flex-end; /* Aligns content to the bottom */
+    height: 200px; /* Set a specific height */
+  
+   
+}
+    
+
+    
+
+
+
+
+

@@ -47,14 +47,39 @@ header h1 {
     box-sizing: border-box;
     
 }
+.expand-services-label {
+    cursor: pointer;
+    display: block;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.service-checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: visible; /* Ensures all content is visible */
+}
+
+
 
 .service-form select {
     width: 100%;
-    padding: 50px 10px; /* Increase vertical padding to make the box taller */
+    padding: 10px; /* Increase vertical padding to make the box taller */
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    height: 35px; /* Ensure the height adjusts with padding */
+    height: auto; /* Ensure the height adjusts with padding */
     font-size: 16px; /* Optional: Adjust font size for balance */
     
 }
@@ -136,6 +161,7 @@ header h1 {
     border-radius: 4px;
     box-sizing: border-box;
 }
+
 
 .service-form textarea {
     width: 100%;
