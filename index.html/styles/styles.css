@@ -46,14 +46,24 @@ header {
     font-size: 15px;
 }
 
-.mission-statement {
+.style1 {
+    padding-top: 0%;
+    padding-bottom: 0%;
+    margin: 20px auto;
+    font-size: 14px; /* Adjusts the font size */
+    font-family: 'Roboto', Verdana;
+    z-index: 11;
+    position: relative;
+    font-weight: bold;
+    text-align: center;
+}
+.style2 {
     background-color: #ffffff; /* Light gray background color, you can change this */
     padding: 15px;
-    
     margin: 20px auto;
     border-radius: 5px;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.998); /* Optional: adds depth with a subtle shadow */
-    font-size: 16px; /* Adjusts the font size */
+    font-size: 14px; /* Adjusts the font size */
     font-family: 'Roboto', Verdana;
     z-index: 11;
     position: relative;
@@ -79,7 +89,7 @@ header {
     position: relative;
     text-align: center;
     letter-spacing: 1px;
-    bottom: -75px;
+    bottom: -35px;
 }
 
 .clickable-text-box:hover {
