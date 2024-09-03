@@ -46,27 +46,32 @@ header {
     font-size: 15px;
 }
 
-.style1 {
+.style1 {  /* "Mission Statement" */
     padding-top: 0%;
+    color:rgb(0, 0, 0);
     padding-bottom: 0%;
     margin: 20px auto;
-    font-size: 14px; /* Adjusts the font size */
+    font-size: 16px; /* Adjusts the font size */
     font-family: 'Roboto', Verdana;
     z-index: 11;
     position: relative;
     font-weight: bold;
     text-align: center;
+    
 }
 .style2 {
-    background-color: #ffffff; /* Light gray background color, you can change this */
+    background-color: #ffffff00; /* Light gray background color, you can change this */
     padding: 15px;
     margin: 20px auto;
     border-radius: 5px;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.998); /* Optional: adds depth with a subtle shadow */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0); /* Optional: adds depth with a subtle shadow */
     font-size: 14px; /* Adjusts the font size */
     font-family: 'Roboto', Verdana;
     z-index: 11;
     position: relative;
+    color:rgb(0, 0, 0);
+    
+    font-weight: bold;
 }
 
 
