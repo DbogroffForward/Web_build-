@@ -51,32 +51,38 @@ header {
     color:rgb(0, 0, 0);
     padding-bottom: 0%;
     margin: 20px auto;
-    font-size: 16px; /* Adjusts the font size */
-    font-family: 'Roboto', Verdana;
-    z-index: 11;
-    position: relative;
-    font-weight: bold;
-    text-align: center;
-    
-}
-.style2 {
-    background-color: #ffffff00; /* Light gray background color, you can change this */
-    padding: 15px;
-    margin: 20px auto;
-    border-radius: 5px;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0); /* Optional: adds depth with a subtle shadow */
     font-size: 14px; /* Adjusts the font size */
     font-family: 'Roboto', Verdana;
     z-index: 11;
     position: relative;
-    color:rgb(0, 0, 0);
+
+    text-align: center;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255); /* Enhances the embossed text with a soft shadow */
+
     
-    font-weight: bold;
+}
+
+
+.style2 {
+    background-color: #ffffff; /* Light gray background color, you can change this */
+    padding: 15px;
+    margin: 20px auto;
+    border: 1px solid #0a5eb9;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgb(58, 54, 136); /* Optional: adds depth with a subtle shadow */
+    font-size: 14px; /* Adjusts the font size */
+    font-family: 'Playfair Display', serif;
+    z-index: 11;
+    position: relative;
+    color:rgb(57, 57, 57);
+    
+    
+    letter-spacing: 1.2px;
 }
 
 
 .clickable-text-box {
-    background-color: #3b58d6; /* Solid color that fits the theme */
+    background-color: #4368cf; /* Solid color that fits the theme */
     border: 2px solid #fcfcfc;
     padding: 20px;
     margin: 20px auto;
@@ -84,7 +90,7 @@ header {
     box-shadow: 0 25px 15px rgba(69, 94, 195, 0.514);
     color: #ffffff;
     font-size: 22px;
-    font-weight: bold;
+    
     width: 30%;
     max-width: 550px;
     height: auto;
