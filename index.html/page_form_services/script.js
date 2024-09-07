@@ -92,8 +92,10 @@ document.addEventListener('DOMContentLoaded', () => {
         cloudName: 'dbukckpnp', // Replace with your Cloudinary cloud name
         uploadPreset: 'FMG_photo_uplods', // Replace with your unsigned upload preset
         maxFiles: 4,
-        sources: ['local', 'url', 'camera'], // Limit upload sources as needed
+        resourceType: "image",
+        sources: ['local',], // Limit upload sources as needed
         multiple: true,
+        accept: "image/*", 
         maxImageWidth: 1000,
         maxImageHeight: 1000,
         folder: 'user_uploads', // Optional: Store uploads in a specific folder

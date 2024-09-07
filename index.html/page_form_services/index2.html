@@ -18,6 +18,12 @@
         <form class="service-form" name="service-request" method="POST" data-netlify="true" action="/page_form_services/form-submitted.html">
             <input type="hidden" name="form-name" value="service-request" />
 
+            
+            
+            
+            
+            
+              
             <div class="name-container">
                 <div>
                     <label for="first-name">First Name:</label>
@@ -74,14 +80,24 @@
             </div>
 
             <div class="photo-upload-section">
-                <h3>Images/Photos (4 maximum)</h3>
-                <button type="button" id="upload_widget" class="cloudinary-button"> Upload image files (optional)</button>
+                <p class="info-text-fm">Photo Upload:</p>
+             
+                <p class="info-text-ff">4 photo limit, videos not accepted</p>
+                <button type="button" id="upload_widget" class="cloudinary-button"> + Add Photos</button>
                 <div id="uploaded_images"></div>
             </div>
             <label for="verify-info">
                 <input type="checkbox" id="verify-info">
                 <span class="custom-checkbox-button">I have verified that my information is correct</span>
             </label>
+
+            <div class="switch-container">
+                <label class="switch">
+                    <input type="checkbox" required>
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-label">I have read and acknowledge the <b>Privacy Policy</b></span>
+            </div>
     
 
             <button type="submit">Submit Request Form</button>
