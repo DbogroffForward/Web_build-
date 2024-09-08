@@ -7,7 +7,6 @@
     <title>Webpage Build</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
 </head>
 
 <body>
@@ -17,41 +16,33 @@
             <div class="header-text">
                 <h1>FORWARD</h1>
                 <h2>MAINTENANCE GROUP LLC</h2>
-
             </div>
         </div>
     </header>
+
     <main style="position: relative; min-height: 100vh; overflow: hidden; padding: 20px;">
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: #959fef80; z-index: 1;"></div>
         <div class="content-wrapper">
-            
-            
-        
-            
-        <div class="mission-statement">
-
-            <p class="style1">"Your home is our 
-                priority and we are grateful for the opportunity to serve you"</p>
-            <p class="style2"> <span style="color: rgb(0, 72, 255); font-weight: bold;">Our Mission:</span><br> Forward Maintenance Group LLC is a team of 
-                dedicated professionals providing top-tier maintenance services 
-                for residential and commercial properties. We pride ourselves 
-                on exceptional workmanship and treat each customer with the 
-                highest level of respect and care. Serving our local communities 
-                is not only our responsibility but our privilege.</p>
-        
-        </div>
-
-
-        <!-- Centered Clickable Text Box -->
-        <div class="centered-container">
-            <div class="clickable-text-box" onclick="window.location.href='page_form_services/index2.html';">
-                <p><i class="fa-solid fa-arrow-pointer fa-rotate-90" style="color: #ffffff;"></i>  Click here to request services online!</p>
+            <div class="mission-statement">
+                <p class="style1">"Your home is our priority and we are grateful for the opportunity to serve you"</p>
+                <p class="style2"><span style="color: rgb(0, 72, 255); font-weight: bold;">Our Mission:</span><br> 
+                    Forward Maintenance Group LLC is a team of dedicated professionals providing top-tier maintenance 
+                    services for residential and commercial properties. We pride ourselves on exceptional workmanship 
+                    and treat each customer with the highest level of respect and care. Serving our local communities 
+                    is not only our responsibility but our privilege.
+                </p>
             </div>
-        </div>
 
-        <div class="info-text">
-            <p><a href="tel:619-718-2455">&#128222; 619-718-2455</a></p>
-            
+            <!-- Centered Clickable Text Box -->
+            <div class="centered-container">
+                <div class="clickable-text-box" onclick="window.location.href='page_form_services/index2.html';">
+                    <p><i class="fa-solid fa-arrow-pointer fa-rotate-90" style="color: #ffffff;"></i>  Click here to request services online!</p>
+                </div>
+            </div>
+
+            <div class="info-text">
+                <p><a href="tel:619-718-2455">&#128222; 619-718-2455</a></p>
+            </div>
         </div>
     </main>
 
@@ -59,7 +50,7 @@
     <div class="expandable-menu-container">
         <button id="expandButton">•••</button>
         <div id="expandableList" class="expandable-list">
-            <a href="About.html">About</a>
+            <a href="Privacy_policy.html">About</a>
             <a href="page2.html">Contact</a>
             <a href="page3.html">Privacy</a>
         </div>
@@ -69,6 +60,39 @@
         <p>&copy; 2024 Forward Maintenance Group LLC</p>
     </footer>
 
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" style="
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: rgba(0, 0, 0, 0.9);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;">
+        <div style="max-width: 600px; padding: 20px; background: #333; border-radius: 10px; text-align: center;">
+            <p>
+                We use third-party services (Cloudinary and Netlify) that may set cookies for performance purposes. 
+                <a href="Privacy_policy.html" style="color: #fff; text-decoration: underline;">Learn more in our Privacy Policy</a>.
+                <a href="/do-not-sell" style="color: #fff; text-decoration: underline;">Do Not Sell My Information</a>.
+            </p>
+            <button id="accept-cookies" style="background: #4CAF50; color: white; border: none; padding: 10px 20px; margin-top: 20px; cursor: pointer; border-radius: 5px;">
+                OK
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript to handle the Cookie Banner -->
+    <script>
+      document.getElementById('accept-cookies').onclick = function() {
+        document.getElementById('cookie-banner').style.display = 'none';
+      };
+    </script>
+
+    <!-- Include your existing JavaScript -->
     <script src="scripts/script.js"></script>
 </body>
 
