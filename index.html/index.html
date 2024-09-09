@@ -50,9 +50,9 @@
     <div class="expandable-menu-container">
         <button id="expandButton">•••</button>
         <div id="expandableList" class="expandable-list">
-            <a href="Privacy_policy.html">About</a>
+            <a href="Privacy_policy.html">Privacy</a>
             <a href="page2.html">Contact</a>
-            <a href="page3.html">Privacy</a>
+            <a href="page3.html">About</a>
         </div>
     </div>
 
@@ -66,31 +66,36 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 50%;
-        background: rgba(0, 0, 0, 0.9);
+        height: 75%;
+        background: rgba(4, 18, 83, 0.606);
         color: #fff;
         display: flex;
         align-items: center;
         justify-content: center;
         z-index: 9999;">
-        <div style="max-width: 600px; padding: 20px; background: #333; border-radius: 10px; text-align: center;">
+        <div style="max-width: 600px; padding: 20px; background: #2735af; border-radius: 10px; text-align: center; position: relative;">
+            <!-- Disclaimer inside the dark box but above checkboxes -->
+            <div>
+                <h3 class="disclaimer-text">Your Privacy Matters</h3>
+            </div>
+            <p class="cookie-message">
+                Our site does not directly use cookies, but third-party services (Cloudinary and Netlify) may set essential cookies for security and functionality. These cookies are necessary for certain site features, like photo uploads, and cannot be disabled. If you wish to block or manage cookies, please use your browser’s cookie settings.
+            </p>
+                <input type="checkbox" id="privacy-checkbox">
+                <label for="privacy-checkbox">
+                    I have read and acknowledge the <a href="Privacy_policy.html" style="color: #fff; text-decoration: underline;"><b>Privacy Policy</b></a>.
+                </label>
+            </p>
             <p>
-                We use third-party services (Cloudinary and Netlify) that may set cookies for performance purposes. 
-                <a href="Privacy_policy.html" style="color: #fff; text-decoration: underline;">Learn more in our Privacy Policy</a>.
-                <a href="/do-not-sell" style="color: #fff; text-decoration: underline;">Do Not Sell My Information</a>.
+                <label for="do-not-sell-checkbox">
+                    We Do Not Sell Your Information
+                </label>
             </p>
             <button id="accept-cookies" style="background: #4CAF50; color: white; border: none; padding: 10px 20px; margin-top: 20px; cursor: pointer; border-radius: 5px;">
-                OK
+                Accept
             </button>
         </div>
     </div>
-
-    <!-- JavaScript to handle the Cookie Banner -->
-    <script>
-      document.getElementById('accept-cookies').onclick = function() {
-        document.getElementById('cookie-banner').style.display = 'none';
-      };
-    </script>
 
     <!-- Include your existing JavaScript -->
     <script src="scripts/script.js"></script>

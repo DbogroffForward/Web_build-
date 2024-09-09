@@ -201,71 +201,16 @@ footer {
 #expandableList a:hover {
     background-color: #ddd;
 }
-#cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: rgba(0, 0, 0, 0.9);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-  }
-  
-  .cookie-content {
-    max-width: 600px;
-    padding: 20px;
-    background: #333;
-    border-radius: 10px;
-    text-align: center;
-  }
-  
-  #cookie-banner a {
-    color: #fff;
-    text-decoration: underline;
-  }
-  
-  #accept-cookies {
-    background: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 20px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-/* This class will disable all pointer events */
-.disable-interaction * {
-    pointer-events: none; /* Disables all interactions */
-}
 
-/* Ensure the cookie banner itself is still clickable */
-#cookie-banner * {
-    pointer-events: all; /* Enables interactions within the banner */
-}
+  
+ 
+  
+ 
+  
 
-.cookie-message {
-    font-size: 14px;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    margin: 20px auto;
-    max-width: 600px;
-    line-height: 1.6;
-}
-/* Existing disclaimer text styling */
-.disclaimer-text {
-    font-size: 25px; /* Size for the disclaimer heading */
-    color: #ffffff; /* White text */
-    font-weight: bold; /* Bold heading */
-    text-align: center; /* Centers the disclaimer heading */
-    margin-bottom: 10px; /* Space below the heading */
-}
+  
+
+
 
 
 
