@@ -1,8 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Document loaded');
 
-    // Disable all interaction on the site initially
-    document.body.classList.add('disable-interaction');
+    // Check if the privacy policy has been acknowledged and hide the cookie banner if true
+    const privacyAcknowledged = sessionStorage.getItem('privacyAcknowledged') === 'true';
+    if (privacyAcknowledged) {
+        document.getElementById('cookie-banner').style.display = 'none';
+        document.body.classList.remove('disable-interaction');
+    } else {
+        // Disable all interaction on the site initially if not acknowledged
+        document.body.classList.add('disable-interaction');
+    }
 
     // Expandable list functionality
     document.getElementById('expandButton').addEventListener('click', function() {
@@ -33,6 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (checkPrivacyPolicyAcknowledgment()) {
             document.getElementById('cookie-banner').style.display = 'none';
             document.body.classList.remove('disable-interaction'); // Re-enable all interactions
+            // Save that the privacy policy has been acknowledged in session storage
+            sessionStorage.setItem('privacyAcknowledged', 'true');
         }
     };
 });
