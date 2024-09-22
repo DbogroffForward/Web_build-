@@ -1,0 +1,84 @@
+/* Existing styles for body, header, etc. remain the same */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1021dc;
+    background-image: linear-gradient(to bottom, #1021dc, #3b58d6, #768fd4);
+    padding: 1em;
+    text-align: center;
+    
+}
+
+.header-container {
+    display: flex;
+    align-items: center; /* Aligns the logo and text vertically */
+    justify-content: center; /* Centers the logo and text within the header */
+    gap: 20px; /* Space between the logo and text */
+}
+
+#headerImage {
+    width: 125px;
+    height: auto;
+    border: 2px solid #fcfcfc;
+    border-image: linear-gradient(10deg, #3543dd, #8fadff) 5%; /* Gradient border */
+    border-radius: 0px;
+}
+
+.header-text h1, .header-text h2 {
+    margin: 0;
+    color: #fff;
+    text-align: left;
+    
+}
+
+.header-text h1 {
+    font-style: italic;
+    font-size: 40px;
+    
+}
+
+
+.header-text h2 {
+    font-size: 15px;
+}
+
+
+
+footer {
+    background-color: #1021dc;
+    background-image: linear-gradient(to bottom, #768fd4, #3b58d6, #1021dc);
+    padding: 1em;
+    color: #fff;
+    text-align: center;
+    bottom: 0;
+    position: relative;
+    
+}
+a {
+    position: relative; /* Ensure z-index can be applied */
+    z-index: 1000; /* High z-index to ensure it is clickable */
+}
+
+
+
+
+
+  
+ 
+  
+ 
+  
+
+  
+
+
+
+
+
+
+  
+
